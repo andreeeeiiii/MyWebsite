@@ -4,64 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jared Andrei M. Parungao | Portfolio & Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <h1>Jared Andrei M. Parungao</h1>
-            <p class="subtitle">Fresh Graduate | Aspiring Web Developer</p>
-            <div class="contact-links">
-                <a href="tel:+639932492069">0993-249-2069</a> • 
-                <a href="mailto:andreiparungao2002@gmail.com">andreiparungao2002@gmail.com</a> • 
-                <a href="https://github.com/andreeeeiiii" target="_blank">GitHub</a>
+    <header class="site-header">
+        <div class="header-inner container">
+            <div class="brand">
+                <h1>Jared Andrei</h1>
+                <div class="role">Aspiring Web Developer</div>
+            </div>
+            <div class="actions">
+                <button id="themeToggle" aria-label="Toggle theme">Toggle</button>
+            </div>
+        </div>
+        <div class="hero container">
+            <div class="hero-text">
+                <h2>Portfolio & Resume</h2>
+                <h3 class="name">Jared Andrei M. Parungao</h3>
+                <p class="subtitle">Fresh Graduate • Web Development • Full‑Stack Enthusiast</p>
+                <div class="contact-links">
+                    <a>0993-249-2069</a>
+                    <a>andreiparungao2002@gmail.com</a>
+                    <a href="https://github.com/andreeeeiiii" target="_blank">GitHub</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="container">
+    <main class="container main-grid">
 
-        <!-- About Me Section -->
-        <section id="about">
+        <section id="about" class="card">
             <h2>About Me</h2>
-            <p>Driven and detail-oriented Bachelor of Science in Computer Science graduate. Eager to leverage academic foundations in [Key Skill 1] and [Key Skill 2] to contribute to innovative projects. Fast learner ready to adapt to a professional environment.</p>
+            <p>Driven and detail-oriented Bachelor of Science in Computer Science graduate. Eager to leverage academic foundations in software development to contribute to innovative projects. Fast learner ready to adapt to a professional environment.</p>
         </section>
 
-        <!-- Education Section -->
-        <section id="education">
-            <h2>Education</h2>
-            <div class="item">
-                <h3>Arellano University</h3>
-                <p class="meta">Bachelor of Science in Computer Science | SY2023 – SY2026</p>
-            </div>
-        </section>
-
-        <!-- Technical Skills Section -->
-        <section id="skills">
-            <h2>Technical Skills</h2>
+        <section id="skills" class="card">
+            <h2>Skills</h2>
             <div class="skills-list">
                 <span class="skill-tag">HTML5</span>
                 <span class="skill-tag">CSS3</span>
                 <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">Bootstrap</span>
-                <span class="skill-tag">Tailwind CSS</span>
                 <span class="skill-tag">Laravel</span>
                 <span class="skill-tag">PHP</span>
                 <span class="skill-tag">MySQL</span>
-                <span class="skill-tag">VS Code</span>
                 <span class="skill-tag">Git</span>
-                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">Tailwind</span>
             </div>
         </section>
 
-        <!-- Projects / Experience Section -->
-        <section id="projects">
+        <section id="projects" class="card wide">
             <h2>Projects</h2>
 
-            <div class="item">
+            <article class="project">
                 <h3>Online Enrollment System with Scheduling and Secured Payment Integration</h3>
                 <p class="meta">Capstone Thesis Project | April 2026 — Present</p>
                 <ul>
@@ -72,9 +68,9 @@
                     <li>Built responsive interfaces using Bootstrap and Tailwind CSS.</li>
                     <li>Created and optimized relational database structures for efficient data management.</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="item">
+            <article class="project">
                 <h3>Northern Island Information Management and Booking System</h3>
                 <p class="meta">PHP, HTML, CSS, MySQL | February 2025</p>
                 <ul>
@@ -83,9 +79,9 @@
                     <li>Participated in manual testing and performance tuning to ensure reliable operation.</li>
                     <li>Assisted in designing a secure MySQL database to store client and travel details efficiently.</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="item">
+            <article class="project">
                 <h3>Arellano University Subject Advising System</h3>
                 <p class="meta">PHP, HTML, CSS, MySQL | March–April 2024</p>
                 <ul>
@@ -94,11 +90,18 @@
                     <li>Developed student and faculty modules for managing subjects, schedules, and grades.</li>
                     <li>Designed a MySQL database to ensure data integrity and user role management.</li>
                 </ul>
+            </article>
+        </section>
+
+        <section id="education" class="card">
+            <h2>Education</h2>
+            <div class="item">
+                <h3>Arellano University</h3>
+                <p class="meta">Bachelor of Science in Computer Science | SY2023 – SY2026</p>
             </div>
         </section>
 
-        <!-- Certifications Section -->
-        <section id="certifications">
+        <section id="certifications" class="card">
             <h2>Certifications & Seminars</h2>
             <div class="item">
                 <h3>ICpEP Free Webinar Series</h3>
@@ -116,10 +119,12 @@
 
     </main>
 
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2026 Jared Andrei M. Parungao. Powered by GitHub Pages.</p>
+        <div class="container footer-inner">
+            <p>&copy; 2026 Jared Andrei M. Parungao</p>
+        </div>
     </footer>
 
+    <script src="css/script.js"></script>
 </body>
 </html>
