@@ -1,25 +1,48 @@
 // Theme toggle: toggles `light` class on body
 (function(){
-	const btn = document.getElementById('themeToggle');
-	if(!btn) return;
-	// restore preference
-	const saved = localStorage.getItem('theme');
-	if(saved === 'light') {
-		document.body.classList.add('light');
-		btn.textContent = 'Light';
-	} else {
-		btn.textContent = 'Dark';
-	}
+  // Theme Toggle
+  const themeBtn = document.getElementById('themeToggle');
+  if(themeBtn){
+    const saved = localStorage.getItem('theme');
+    if(saved === 'light') {
+      document.body.classList.add('light');
+      themeBtn.textContent = 'Light';
+    } else {
+      themeBtn.textContent = 'Dark';
+    }
 
-	btn.addEventListener('click', ()=>{
-		const isNowLight = document.body.classList.toggle('light');
-		const theme = isNowLight ? 'light' : 'dark';
-		localStorage.setItem('theme', theme);
-		btn.textContent = isNowLight ? 'Light' : 'Dark';
-	});
+    themeBtn.addEventListener('click', ()=>{
+      const isNowLight = document.body.classList.toggle('light');
+      const theme = isNowLight ? 'light' : 'dark';
+      localStorage.setItem('theme', theme);
+      themeBtn.textContent = isNowLight ? 'Light' : 'Dark';
+    });
+  }
 
-	// subtle parallax on hero
-	const hero = document.querySelector('.hero');
+  // Modal Control
+  const modal = document.getElementById('contactModal');
+  const contactBtns = document.querySelectorAll('.contact-btn, a[href="#contact"]');
+  const closeBtn = document.getElementById('closeModal');
+  const overlay = document.querySelector('.modal-overlay');
+
+  if(modal){
+    const openModal = () => modal.classList.add('active');
+    const closeModal = () => modal.classList.remove('active');
+
+    contactBtns.forEach(btn => btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    }));
+
+    if(closeBtn) closeBtn.addEventListener('click', closeModal);
+    if(overlay) overlay.addEventListener('click', closeModal);
+    
+    window.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape') closeModal();
+    });
+  }
+
+  // Parallax on hero
 	if(hero){
 		window.addEventListener('mousemove', (e)=>{
 			const x = (e.clientX / window.innerWidth - 0.5) * 10;

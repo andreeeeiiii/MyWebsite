@@ -25,8 +25,7 @@
                 <h3 class="name">Jared Andrei M. Parungao</h3>
                 <p class="subtitle">Fresh Graduate • Web Development • Full‑Stack Enthusiast</p>
                 <div class="contact-links">
-                    <a>0993-249-2069</a>
-                    <a>andreiparungao2002@gmail.com</a>
+                    <a href="#contact" class="contact-btn">📩 Contact Me</a>
                     <a href="https://github.com/andreeeeiiii" target="_blank">GitHub</a>
                 </div>
             </div>
@@ -118,6 +117,39 @@
         </section>
 
     </main>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Get In Touch</h2>
+                <button id="closeModal" class="modal-close" aria-label="Close">&times;</button>
+            </div>
+            <p class="modal-subtitle">Interested in working together? Send me a message and I will get back to you as soon as possible.</p>
+            
+            <form action="https://web3forms.com" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="542e9134-3e2d-4b7b-988b-cf1a75ac15b0">
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Hi Jared, I saw your portfolio and..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
 
     <footer>
         <div class="container footer-inner">
